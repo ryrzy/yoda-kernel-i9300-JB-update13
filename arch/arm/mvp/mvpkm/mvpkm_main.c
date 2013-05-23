@@ -2321,6 +2321,8 @@ SetupMonitor(MvpkmVM *vm)
 #if USE_ARCH_EXTENSION_SEC
          ".arch_extension sec\n\t"
 #endif
+
+	".arch_extension sec\n"
          "smc 0"
          :
          : "r" (r0), "r" (r1), "r" (r2), "r" (r3), "r" (r4)
