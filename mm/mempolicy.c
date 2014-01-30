@@ -930,7 +930,7 @@ static int migrate_to_node(struct mm_struct *mm, int source, int dest,
 								false, MIGRATE_SYNC);
 #else
 		err = migrate_pages(&pagelist, new_node_page, dest,
-								false, true, 0);
+								false, MIGRATE_SYNC, 0);
 #endif
 		if (err)
 			putback_lru_pages(&pagelist);
